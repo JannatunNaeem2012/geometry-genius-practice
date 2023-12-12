@@ -11,4 +11,25 @@ function triangleAreaCalculate(){
     
     const triangleArea = 0.5 * base * height
     
+    // show the result
+    const areaSpanTriangle = document.getElementById('triangle-area-value')
+    areaSpanTriangle.innerText = triangleArea
+}
+
+function rectangleAreaCalculate(){
+    // get rectangle width value
+    const widthField = document.getElementById('rectangle-width')
+    const widthValue = widthField.value 
+    const width = parseFloat(widthValue)
+
+    // get rectangle length value
+    const lengthField = document.getElementById('rectangle-length')
+    const lengthValue = lengthField.value
+    const length = parseFloat(lengthValue)
+    
+    const rectangleArea = width * length
+    
+    // show the result
+    const areaSpanrectangle = document.getElementById('rectangle-area-value')
+    areaSpanrectangle.innerText = rectangleArea
 }

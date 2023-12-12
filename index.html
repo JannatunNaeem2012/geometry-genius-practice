@@ -27,7 +27,7 @@
                       <p>Area (A) = 0.5 x b x h</p>
                       <p><input class="border w-24 bg-gray-200 text-xl px-1" placeholder="b" type="text" id="triangle-base"> <span class="ml-2">cm</span>
                         <input class="ml-1 border w-24 bg-gray-200 text-xl px-1" placeholder="h" type="text" id="triangle-height"> <span class="ml-2">cm</span></p>
-                        <p>Area: </p>
+                        <p class="text-xl font-bold py-2">Area: <span id="triangle-area-value">0</span> cm<sup>2</sup></p>
                       <div class="card-actions ">
                         <button onclick="triangleAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
                       </div>
@@ -35,18 +35,18 @@
                   </div>
                 <!-- rectangle card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="images/rectangle.png" alt="" /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Rectangle</h2>
-                      <p>Area (A) = 0.5 x b x h</p>
-                      <p><input class="border w-24 bg-gray-200 text-xl px-1" placeholder="b" type="text"> <span class="ml-2">cm</span>
-                        <input class="ml-1 border w-24 bg-gray-200 text-xl px-1" placeholder="h" type="text"> <span class="ml-2">cm</span></p>
-                        <p>Area: </p>
-                      <div class="card-actions ">
-                        <button class="btn btn-primary w-full">Calculate</button>
-                      </div>
+                  <figure><img src="images/rectangle.png" alt="rectangle" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">rectangle</h2>
+                    <p>Area (A) = w x l</p>
+                    <p><input class="border w-24 bg-gray-200 text-xl px-1" placeholder="w" type="text" id="rectangle-width"> <span class="ml-2">cm</span>
+                      <input class="ml-1 border w-24 bg-gray-200 text-xl px-1" placeholder="l" type="text" id="rectangle-length"> <span class="ml-2">cm</span></p>
+                      <p class="text-xl font-bold py-2">Area: <span id="rectangle-area-value">0</span> cm<sup>2</sup></p>
+                    <div class="card-actions ">
+                      <button onclick="rectangleAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
                     </div>
                   </div>
+                </div>
                 <!-- third card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure><img src="images/parallelogram.png" alt="triangle" /></figure>
