@@ -33,3 +33,29 @@ function rectangleAreaCalculate(){
     const areaSpanrectangle = document.getElementById('rectangle-area-value')
     areaSpanrectangle.innerText = rectangleArea
 }
+
+// parallelogram area finder
+function parallelogramAreaCalculate(){
+    // get base 
+    const parallelogramBase = getInputValue('parallelogram-base')
+    // get height
+    const parallelogramHeight = getInputValue('parallelogram-height')
+    const parallelogramArea = parallelogramBase * parallelogramHeight
+
+    // set the value
+    setElementText('parallelogram-area-value', parallelogramArea)
+}
+
+// common function to get value from the input field
+function getInputValue(inputFieldId){
+    const inputField = document.getElementById(inputFieldId)
+    const inputFieldValueString = inputField.value 
+    const inputFieldValue = parseFloat(inputFieldValueString)
+    return inputFieldValue
+}
+
+// common function to set the area value
+function setElementText(elementId, calculatedArea){
+    const element = document.getElementById(elementId)
+    element.innerText = calculatedArea
+}
