@@ -26,6 +26,11 @@ function rectangleAreaCalculate(){
     const lengthField = document.getElementById('rectangle-length')
     const lengthValue = lengthField.value
     const length = parseFloat(lengthValue)
+    // validate field values
+    if(isNaN(width) || isNaN(length)){
+        alert('please insert a number')
+        return;
+    }
     
     const rectangleArea = width * length
     
@@ -44,6 +49,17 @@ function parallelogramAreaCalculate(){
 
     // set the value
     setElementText('parallelogram-area-value', parallelogramArea)
+}
+// ellipse area finder
+function ellipseAreaCalculate(){
+    // get larger axis
+    const ellipseLargerAxis = getInputValue('ellipse-larger-axis')
+    // get smaller axis
+    const ellipseSmallerAxis = getInputValue('ellipse-smaller-axis')
+    // set ellipse area value
+    const ellipseArea = 3.14 * ellipseLargerAxis * ellipseSmallerAxis
+    const areaTwoDecimal = ellipseArea.toFixed(2)
+    setElementText('ellipse-area-value', areaTwoDecimal)
 }
 
 // common function to get value from the input field
