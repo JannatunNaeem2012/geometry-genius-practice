@@ -37,6 +37,9 @@ function rectangleAreaCalculate(){
     // show the result
     const areaSpanrectangle = document.getElementById('rectangle-area-value')
     areaSpanrectangle.innerText = rectangleArea
+
+    addToCalculationEntry('Rectangle Area',rectangleArea)
+    
 }
 
 // parallelogram area finder
@@ -74,4 +77,21 @@ function getInputValue(inputFieldId){
 function setElementText(elementId, calculatedArea){
     const element = document.getElementById(elementId)
     element.innerText = calculatedArea
+}
+
+// add to calculation entry box
+function addToCalculationEntry(areaType, area){
+    // get the element you want to add new entry to
+    const calculationEntry = document.getElementById('calculation-entry')
+    // create element
+    const p = document.createElement('p')
+    // count the children
+    const count = calculationEntry.childElementCount
+
+    // add spacing between entries
+    p.classList.add('my-4')
+
+    p.innerHTML = `${count+1}. ${areaType} ${area} cm<sup>2</sup>  <button class="btn btn-success">convert</button>`
+
+    calculationEntry.appendChild(p)
 }

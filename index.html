@@ -14,9 +14,9 @@
     <header>
 
     </header>
-    <main>
+    <main class="my-4">
         <!-- main container -->
-        <div class="flex flex-col lg:flex-row">
+        <div class="flex flex-col lg:flex-row my-10">
             <!-- shapes -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- triangle card -->
@@ -75,31 +75,31 @@
                     </div>
                   </div>
                 </div>
-                <!-- paralleloram card -->
+                <!-- rhombus card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                  <figure><img src="images/parallelogram.png" alt="parallelogram" /></figure>
+                  <figure><img src="images/rhombus.png" alt="rhombus" /></figure>
                   <div class="card-body">
-                    <h2 class="card-title">Parallelogram</h2>
+                    <h2 class="card-title">Rhombus</h2>
                     <p>Area (A) = b x h</p>
-                    <p><input class="border w-24 bg-gray-200 text-xl px-1" placeholder="b" type="text" id="parallelogram-base"> <span class="ml-2">cm</span>
-                      <input class="ml-1 border w-24 bg-gray-200 text-xl px-1" placeholder="h" type="text" id="parallelogram-height"> <span class="ml-2">cm</span></p>
-                      <p class="text-xl font-bold py-2">Area: <span id="parallelogram-area-value">0</span> cm<sup>2</sup></p>
+                    <p><input class="border w-24 bg-gray-200 text-xl px-1" placeholder="b" type="text" id="rhombus-base"> <span class="ml-2">cm</span>
+                      <input class="ml-1 border w-24 bg-gray-200 text-xl px-1" placeholder="h" type="text" id="rhombus-height"> <span class="ml-2">cm</span></p>
+                      <p class="text-xl font-bold py-2">Area: <span id="rhombus-area-value">0</span> cm<sup>2</sup></p>
                     <div class="card-actions ">
-                      <button onclick="parallelogramAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
+                      <button onclick="rhombusAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
                     </div>
                   </div>
                 </div>
-                <!-- paralleloram card -->
+                <!-- pentagon card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                  <figure><img src="images/parallelogram.png" alt="parallelogram" /></figure>
+                  <figure><img src="images/pentagon.png" alt="pentagon" /></figure>
                   <div class="card-body">
-                    <h2 class="card-title">Parallelogram</h2>
+                    <h2 class="card-title">Pentagon</h2>
                     <p>Area (A) = b x h</p>
-                    <p><input class="border w-24 bg-gray-200 text-xl px-1" placeholder="b" type="text" id="parallelogram-base"> <span class="ml-2">cm</span>
-                      <input class="ml-1 border w-24 bg-gray-200 text-xl px-1" placeholder="h" type="text" id="parallelogram-height"> <span class="ml-2">cm</span></p>
-                      <p class="text-xl font-bold py-2">Area: <span id="parallelogram-area-value">0</span> cm<sup>2</sup></p>
+                    <p><input class="border w-24 bg-gray-200 text-xl px-1" placeholder="b" type="text" id="pentagon-base"> <span class="ml-2">cm</span>
+                      <input class="ml-1 border w-24 bg-gray-200 text-xl px-1" placeholder="h" type="text" id="pentagon-height"> <span class="ml-2">cm</span></p>
+                      <p class="text-xl font-bold py-2">Area: <span id="pentagon-area-value">0</span> cm<sup>2</sup></p>
                     <div class="card-actions ">
-                      <button onclick="parallelogramAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
+                      <button onclick="pentagonAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
                     </div>
                   </div>
                 </div>
@@ -108,6 +108,9 @@
             <!-- calculator -->
             <div>
                 <div class="text-4xl w-[400px]">Area Calculator</div>
+                <div id="calculation-entry">
+                  
+                </div>
             </div>
         </div>
         
