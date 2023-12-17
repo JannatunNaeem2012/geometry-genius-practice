@@ -8,12 +8,20 @@ function triangleAreaCalculate(){
     const heightField = document.getElementById('triangle-height')
     const heightValue = heightField.value
     const height = parseFloat(heightValue)
+
+    // validate field values
+    if(isNaN(base) || isNaN(height)){
+        alert('please insert a number')
+        return;
+    }
     
     const triangleArea = 0.5 * base * height
     
     // show the result
     const areaSpanTriangle = document.getElementById('triangle-area-value')
     areaSpanTriangle.innerText = triangleArea
+
+    addToCalculationEntry('Triangle Area',triangleArea)
 }
 
 function rectangleAreaCalculate(){
@@ -48,10 +56,18 @@ function parallelogramAreaCalculate(){
     const parallelogramBase = getInputValue('parallelogram-base')
     // get height
     const parallelogramHeight = getInputValue('parallelogram-height')
+
+    // validate field values
+    if(isNaN(parallelogramBase) || isNaN(parallelogramHeight)){
+        alert('please insert a number')
+        return;
+    }
+
     const parallelogramArea = parallelogramBase * parallelogramHeight
 
     // set the value
     setElementText('parallelogram-area-value', parallelogramArea)
+    addToCalculationEntry('Parallelogram Area',parallelogramArea)
 }
 // ellipse area finder
 function ellipseAreaCalculate(){
@@ -59,10 +75,17 @@ function ellipseAreaCalculate(){
     const ellipseLargerAxis = getInputValue('ellipse-larger-axis')
     // get smaller axis
     const ellipseSmallerAxis = getInputValue('ellipse-smaller-axis')
+
+    // validate field values
+     if(isNaN(ellipseLargerAxis) || isNaN(ellipseSmallerAxis)){
+        alert('please insert a number')
+        return;
+    }
     // set ellipse area value
     const ellipseArea = 3.14 * ellipseLargerAxis * ellipseSmallerAxis
     const areaTwoDecimal = ellipseArea.toFixed(2)
     setElementText('ellipse-area-value', areaTwoDecimal)
+    addToCalculationEntry('Ellipse Area',areaTwoDecimal)
 }
 
 // common function to get value from the input field
